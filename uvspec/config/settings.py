@@ -113,9 +113,12 @@ class ConfigFile():
         self._write_config()
 
     def _write_config(self):
-        # Write the configuration's files contents to disk.
-        with open(self.filename, 'w') as configfile:
-            self.config.write(configfile)
+        # Write the configuration's files contents to disk, if possible
+        try:
+            with open(self.filename, 'w') as configfile:
+                self.config.write(configfile)
+        except IOError:
+            pass
 
 
 class Settings():
