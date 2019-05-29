@@ -33,15 +33,15 @@ def _update_fit_parameters():
     # provdied by the user at run-time.  If no values are specified, the
     # current default values are maintained.
     config = ConfigFile()
-    for parameter, value in settings.parameters.iteritems():
+    for parameter, value in settings.parameters.items():
         config.update(parameter, value)
-    print ' Fit paramters have been updated'
+    print (' Fit paramters have been updated')
 
 
 def _reset_fit_parameters():
     # Reset the fit parameters to their originally installed default values.
     ConfigFile().reset()
-    print ' Fit parameters have been reset to their original default values'
+    print (' Fit parameters have been reset to their original default values')
 
 
 def _generate_spectrum():

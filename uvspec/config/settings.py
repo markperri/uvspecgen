@@ -69,7 +69,7 @@ class ConfigFile():
         self.config = configparser.ConfigParser()
 
         self.default = {}
-        for param, value in DEFAULT_FIT_PARAMETERS.iteritems():
+        for param, value in DEFAULT_FIT_PARAMETERS.items():
             self.default[param] = str(value)
 
         if not os.path.exists(self.path):
@@ -99,7 +99,7 @@ class ConfigFile():
         self.config.read(self.filename) 
         params = self.config['FitParameters']
         # Convert the parameter values from strings to floats
-        params = dict([k, float(v)] for k, v in params.iteritems())
+        params = dict([k, float(v)] for k, v in params.items())
         return params 
 
     def reset(self):
@@ -262,6 +262,6 @@ def error(message, die=True):
     set to False.
 
     """
-    print ' [ERROR] %s' % message
+    print (' [ERROR] %s' % message)
     if die:
         sys.exit(1)

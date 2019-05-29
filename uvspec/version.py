@@ -20,7 +20,7 @@ The version number is stored as a 4-item tuple: (MAJOR, MINOR, PATCH, BUILD).
 If BUILD is greater than zero, the current version is a beta release.
 
 """
-version = (1, 0, 0, 0)
+version = (1, 1, 0, 0)
 
 
 def get_version():
